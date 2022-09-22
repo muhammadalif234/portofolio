@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+        #animate{
+        position: absolute;
+}
+        </style>
+    </head>
+    <body>
+   <div>
+            <button type="button" name="login"  class="btn btn-primary" onclick="gantiGambar()">main</button>
+            <img src="https://i.pinimg.com/564x/f6/1e/b8/f61eb8049ba2246ba5d4105570eae224.jpg" id="gambarBerganti"/>
+        </div>
+
+    </body>
+ 
+        <script>
+        function gantiGambar(){
+            if ( document.getElementById("gambarBerganti").src =="https://i.pinimg.com/564x/f6/1e/b8/f61eb8049ba2246ba5d4105570eae224.jpg")
+            {
+                document.getElementById("gambarBerganti").src ="https://i.pinimg.com/564x/30/6a/b5/306ab581f991db4d76c57d0021ac6fd9.jpg"
+            }else
+            {
+                document.getElementById("gambarBerganti").src ="https://i.pinimg.com/564x/f6/1e/b8/f61eb8049ba2246ba5d4105570eae224.jpg"
+            }
+        }
+    </script>
+</html>
