@@ -12,3 +12,15 @@ body{
     width: 200px;
     height: 200px;
 }
+.buat-bawah
+{
+    width: 100%;
+    height: 20%;
+    border: 1 px solid black;
+    float: center;
+    padding:5%;
+}
+.img-bawah{
+    width: 200px;
+    height: 200px;
+}
