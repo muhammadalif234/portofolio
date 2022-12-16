@@ -1,0 +1,52 @@
+.judul{
+    font-style: italic;
+    color: rgb(4, 4, 134);
+    background-color: aliceblue;
+    padding:10px;
+}
+.gambarheader{
+    float:left;
+    max-width: 50%;
+    
+}
+/*untuk style footer*/
+#main-kolaborasi img{
+    max-height: 10%;
+    max-width: 10%;
+}
+
+#main-kolaborasi a {
+    justify-content: center;
+    align-self: center;
+    margin-right: 20px;
+}
+h2.main.judul::after {
+  margin: auto;
+  margin-top: 20px;
+  display: block;
+  border-bottom: 10px;
+  width: 100px;
+  content:"";
+
+}
+
+.navbar-scrolled{
+    background-color: #fff;
+    transition: background-color 05.s ease;
+}
+h2.span{
+    font-style: italic;
+}
+
+.grey{ 
+    background-color: aliceblue;
+    padding: 10px;
+
+}
+.buatteknologi{
+    color:#999;
+    font-size: 22px;
+    font-weight: 600;
+} 
+
+/* buat css tingkatkan it*\ 
