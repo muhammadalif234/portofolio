@@ -1,0 +1,65 @@
+body{
+    max-width: 960px;
+}
+        .biru{
+        color: blue;
+        clear: right;
+       
+        padding-left: 220px;
+       
+       
+        }
+        .file-atas{
+            width:950px;
+            height: 80px;
+            border:2px solid rgb(22, 22, 62);
+                  
+
+        }
+        .file-tengah{
+         
+          
+            width:930px;
+            height:800px;
+            border:2px solid black;
+            
+        
+        }
+        .file-tengah-kanan{
+            float:right;
+          padding-left:100px;
+          display: block;
+
+            
+        }
+        .file-biodata{
+        justify-content: right;
+        align-content: right;
+        padding-right: 100px;
+        
+        
+    
+        color: brown;
+        
+            
+        }
+        .file-kanan{
+            padding: 10px;
+            margin:10px;
+            
+        
+          float: right;
+        }
+        .file-kiri{
+           margin-left: 10px;
+           margin-top: 20px;
+      
+
+           float: left;             
+           color:rgb(0, 0, 0);
+           font-size: 30px;
+        }
+        .img-ukuran{
+            width: 40px;
+            height: 40px;
+        }
