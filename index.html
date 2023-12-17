@@ -1,12 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>hello world</h1>
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Muhammad alif</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Layouts
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html">bab 1</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                                </nav>
+                            </div>
+                           
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Authentication
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                            <a class="nav-link" href="password.html">Forgot Password</a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Error
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="401.html">401 Page</a>
+                                            <a class="nav-link" href="404.html">404 Page</a>
+                                            <a class="nav-link" href="500.html">500 Page</a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Charts
+                            </a>
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tables
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        muhammad alif
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">tugas 1</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">NAMA:MUHAMMAD ALIF</li>
+                            <li class="breadcrumb-item active">NIM:17220910</li>
+                            <li class="breadcrumb-item active">KELAS:17.3C.05</li>
+
+
+
+                        </ol>
+                       
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                jenis -jenis jaringan komputer
+                            </div>
+                            <div class="card-body">
+                             
+                                  <h4>1. Jaringan Lokal Local Area Network/LAN</h4>
+                                  <br>
+                                <p style="padding-bottom:3% ;">
+                                    Jaringan Lokal (LAN) adalah jaringan yang digunakan untuk menghubungkan perangkat-perangkat komputer dalam area geografis yang terbatas, seperti rumah, kantor, atau gedung. LAN biasanya menggunakan kabel Ethernet sebagai media transmisi untuk mengirimkan data antara perangkat-perangkat yang terhubung. Jaringan ini memungkinkan berbagi sumber daya, seperti printer, file, dan koneksi internet di antara perangkat-perangkat yang terhubung dalam jarak yang relatif dekat.
+                                    
+                                    </p>
+                                    <h4>2.Jaringan Metropolitan (Metropolitan Area Network/MAN)</h4>
+                                    <br><p style="padding-bottom: 3%;">Jaringan Metropolitan (MAN) meliputi area yang lebih luas daripada LAN, seperti kota atau wilayah perkotaan. MAN menggunakan teknologi yang lebih canggih, seperti serat optik atau jaringan nirkabel, untuk menghubungkan beberapa LAN di area yang lebih besar. MAN biasanya dimiliki dan dioperasikan oleh penyedia layanan jaringan atau organisasi yang melayani wilayah tertentu. MAN dapat digunakan untuk menghubungkan berbagai institusi, seperti kampus universitas, perusahaan-perusahaan, atau pemerintahan kota.</p>
+                                <h4 >3.Jaringan Luas (Wide Area Network/WAN)
+                                    
+                                </h4>
+                                <br><p>Jaringan Luas (WAN) mencakup area yang lebih besar, bahkan mencakup wilayah yang sangat luas, seperti negara atau benua. WAN menghubungkan jaringan lokal dan metropolitan di lokasi yang berjauhan melalui media transmisi yang berbeda, seperti kabel serat optik, kabel tembaga, atau jaringan satelit. Internet adalah contoh paling umum dari WAN yang mencakup seluruh dunia. WAN memungkinkan komunikasi dan pertukaran data antara perangkat-perangkat yang terhubung di lokasi yang terpisah secara efisien.</p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                pemanfaatan jaringan komputer
+                            </div>
+                            <div class="card-body">
+                             
+                                  <h4>1.Berbagi Sumber Daya</h4>
+                                  <br>
+                                <p style="padding-bottom:3% ;">
+                                    Jaringan komputer memungkinkan berbagai perangkat untuk saling berkomunikasi dan berbagi sumber daya. Ini termasuk berbagi file dan dokumen antar pengguna, mencetak dari printer bersama, dan mengakses data atau program yang disimpan di server. Dengan adanya jaringan, efisiensi penggunaan perangkat keras dan perangkat lunak dapat ditingkatkan karena tidak perlu memiliki salinan duplikat di setiap komputer.
+                                    </p>
+                                    <h4>2.Akses Informasi</h4>
+                                    <br><p style="padding-bottom: 3%;">
+                                        Jaringan komputer memungkinkan akses cepat dan mudah terhadap informasi dari berbagai sumber. Internet, sebagai bentuk besar dari jaringan global, memberikan akses ke sumber daya informasi dunia yang tak terbatas. Dengan adanya jaringan, pengguna dapat mengakses basis data, perpustakaan digital, dan sumber daya online lainnya, memungkinkan pertukaran informasi yang cepat dan efisien.</p>
+                         
+                                           <h4>3.Komunikasi Efisien</h4>
+                                <br><p>Jaringan komputer memfasilitasi komunikasi antar individu dan kelompok dengan cara yang efisien. Email, pesan instan, panggilan video, dan konferensi web adalah contoh dari cara-cara di mana jaringan mendukung komunikasi. Bisnis dapat menggunakan jaringan untuk berkomunikasi secara internal dan eksternal, yang membantu meningkatkan koordinasi, kolaborasi, dan efisiensi operasional..</p>
+                            </div>
+                        </div>
+                        
+                       
+                        <div class="row">
+                           
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">tugas 2<br>diskusi kelompok</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="tugas2.html">lihat tugas</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">tugas 3</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="tugas3.html">lihattugas</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Danger Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                         
+                
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
 </html>
